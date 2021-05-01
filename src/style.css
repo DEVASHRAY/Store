@@ -13,7 +13,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  background-color: #a020f0;
+  background-color: #f8f8f8;
   color: #333;
 }
 
@@ -138,13 +138,13 @@ body {
 }
 
 .card{
-    background-color: #fff;
+    
   border-radius: 0.4rem;
   overflow: hidden;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: 0.2s;
-  background-color: #a020f0;
+  background-color: #ffffff;
 
 }
 .card:hover{

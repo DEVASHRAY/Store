@@ -47,11 +47,13 @@ const GetData = (props) => {
             if (!props.isChecked && obj.is_in_stock > 0) {
             filteredItem = obj;
             }
-            if (props.isChecked && obj.is_in_stock >= 0) {
+            else if (props.isChecked && obj.is_in_stock >= 0) {
             filteredItem = obj;
             }
         }
-        
+        else{
+
+        }
         return filteredItem;
     });
 }

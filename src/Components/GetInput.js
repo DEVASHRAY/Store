@@ -5,7 +5,7 @@ const GetInput = (props) => {
   console.log("RENDER GETINPUT 1");
   const [input, setInput] = useState("");
   const [searchItem, setSreachItem] = useState("");
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(true);
 
   const handleChange = (event) => {
     const { value } = event.target;
