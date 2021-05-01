@@ -4,9 +4,15 @@ import BackBtn from "./BackBtn";
 import DisplayData from "./DisplayData";
 import NoData from "./NoData";
 
+/** Component recieves the props and uses Array method to extract data from Data.js file 
+    based on the search item and value of checkbox and then passes the Extracted Data to DisplayData
+    Component for Display.
+ */
+
 const GetData = (props) => {
-  console.log("serach Item", props.searchItem);
   let ExtractedData;
+
+  // Checking for empty inputbox and checkbox value
 
   if (props.searchItem === "" && !props.isChecked) {
     ExtractedData = Data.map((obj) => {
@@ -18,10 +24,11 @@ const GetData = (props) => {
     });
   }
 
+  // Filtering Data based on user search
+
   if (props.searchItem !== "") {
     ExtractedData = Data.filter((obj) => {
       let filteredItem;
-      // obj.name = obj.name.replace(/ +/g, "");
 
       if (obj.name.toLowerCase().includes(props.searchItem.toLowerCase())) {
         if (props.isChecked && obj.is_in_stock > 0) {
@@ -34,9 +41,11 @@ const GetData = (props) => {
       return filteredItem;
     });
   }
-  console.log("ExtractedData", ExtractedData);
   return (
     <>
+      {/* Check whether the searched item is present in the database or not. if no items matches the item in database
+        then NoData Component is returned else DisplayData Component is returned */}
+
       {ExtractedData.length === 0 ? (
         <NoData />
       ) : (
@@ -48,7 +57,11 @@ const GetData = (props) => {
           </div>
         </>
       )}
-      {props.searchItem != "" ? <BackBtn/> : null}
+
+      {/* Checking if its the landing Page then BackBtn Component wont be rendered and if its a searched page 
+        the BackBtn C willl be rendered */}
+
+      {props.searchItem !== "" ? <BackBtn /> : null}
     </>
   );
 };

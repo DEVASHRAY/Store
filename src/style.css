@@ -18,8 +18,8 @@ body {
 }
 
 .main--page {
-    max-width: 90%;
-    margin: 1rem auto;
+  max-width: 90%;
+  margin: 1rem auto;
 }
 
 .header {
@@ -50,6 +50,7 @@ body {
   transition: background-color 250ms;
   margin: 1rem;
 }
+
 .search--button:hover {
   background-color: rgba(0, 0, 0, 0.85);
 }
@@ -60,7 +61,6 @@ body {
   margin: 1rem;
 }
 
-/** Styling of Display Cards **/
 
 .grid--item {
   display: grid;
@@ -69,49 +69,12 @@ body {
   margin: 2rem 4rem;
 }
 
-/** IMAGE CAROUSEL **/
-
 .slider {
   position: relative;
   height: auto;
   display: flex;
   justify-content: center;
   width: 256px;
-}
-
-.card-image {
-  height: 400px;
-  margin: 3rem 1rem;
-  border-radius: 5%;
-  padding: 1rem 2rem;
-  width: auto;
-
-}
-
-/* .card-image:hover{
-   
-    box-shadow: 0 3rem 6rem rgba(205, 65, 224, 0.644);
-  cursor: pointer;
-  transition: 0.2s;
-  transform: translateY(-0.5%);
-  transform: translateX(-0.5%);
-} */
-
-.img-available:hover {
-  box-shadow: 0 2rem 8rem rgba(11, 233, 29, 0.897);
-  cursor: pointer;
-  transition: 0.2s;
-  transform: translateY(-0.5%);
-  transform: translateX(-0.5%);
-  /* border-radius: %; */
-}
-
-.img-out_of_stock:hover {
-  box-shadow: 0 2rem 8rem rgba(233, 11, 11, 0.897);
-  cursor: pointer;
-  transition: 0.2s;
-  transform: translateY(-0.5%);
-  transform: translateX(-0.5%);
 }
 
 .right-arrow {
@@ -124,6 +87,7 @@ body {
   cursor: pointer;
   user-select: none;
 }
+
 .left-arrow {
   position: absolute;
   top: 50%;
@@ -135,26 +99,63 @@ body {
   user-select: none;
 }
 
+.card {
+  border-radius: 0.4rem;
+  overflow: hidden;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: #ffffff;
+  max-width: 350px;
+}
+
+.card:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
 .cardd {
   display: flex;
   justify-content: center;
 }
 
-.card {
-  border-radius: 0.4rem;
-  overflow: hidden;
-  /* box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1); */
+.card-image {
+  height: 400px;
+  margin: 3rem 1rem;
+  border-radius: 5%;
+  padding: 1rem 2rem;
+  width: auto;
+}
+
+.available {
+  color: rgb(94, 255, 0);
+  margin-left: auto;
+  margin-right: 1.5rem;
+  padding-bottom: 1.3rem;
+}
+
+.img-available:hover {
+    box-shadow: 0 2rem 8rem rgba(11, 233, 29, 0.897);
+    cursor: pointer;
+    transition: 0.2s;
+    transform: translateY(-0.5%);
+    transform: translateX(-0.5%);
+  }
+
+.out_of_stock {
+  color: red;
+  margin-left: auto;
+  margin-right: 1.5rem;
+  padding-bottom: 1.3rem;
+}
+
+.img-out_of_stock:hover {
+  box-shadow: 0 2rem 8rem rgba(233, 11, 11, 0.897);
   cursor: pointer;
   transition: 0.2s;
-  background-color: #ffffff;
-  max-width: 350px;
-  
+  transform: translateY(-0.5%);
+  transform: translateX(-0.5%);
 }
-.card:hover {
-  /* transform: translateY(-0.5%);
-  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5); */
-}
-/** CARD CONTENT **/
 
 .card-content {
   font-size: 1.2rem;
@@ -167,24 +168,6 @@ body {
   text-align: center;
 }
 
-.item-name {
-    
-}
-
-.available {
-  color: rgb(94, 255, 0);
-  margin-left: auto;
-  margin-right: 1.5rem;
-  padding-bottom: 1.3rem;
-}
-
-.out_of_stock {
-  color: red;
-  margin-left: auto;
-  margin-right: 1.5rem;
-  padding-bottom: 1.3rem;
-}
-
 .nodata {
   display: flex;
   flex-direction: column;
@@ -192,8 +175,8 @@ body {
   align-items: center;
 }
 
-.nodata-btn{
-    background-color: rgba(0, 0, 0, 0.75);
+.nodata-btn {
+  background-color: rgba(0, 0, 0, 0.75);
   color: white;
   padding: 1rem 2rem;
   border: 1px solid rgba(0, 0, 0, 0.75);
@@ -206,13 +189,13 @@ body {
   margin-top: 2rem;
 }
 
-.nodata-btn:hover{
-    background-color: rgba(0, 0, 0, 0.85);
+.nodata-btn:hover {
+  background-color: rgba(0, 0, 0, 0.85);
 }
+
 .nodata-img {
-    max-width : 100%;
-    max-height: 100%;
-       
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .nodata-btn > a {
@@ -231,24 +214,15 @@ body {
 
   .grid--item {
     display: grid;
-
     grid-gap: 6rem;
     grid-template-columns: repeat(3, 1fr);
   }
-  
 }
-/* 
-@media only screen (min-width:430px) and (max-width:785px) {
-  body{
-    background-color: red;
-  }  
-} */
-@media all and (max-width: 1199px) and (min-width: 673px){
-   
-        .grid--item {
-            display: grid;
-        
-            grid-gap: 2rem;
-            grid-template-columns: repeat(2 , 0.8fr);
-          }
-        }
+
+@media all and (max-width: 1199px) and (min-width: 673px) {
+  .grid--item {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 0.8fr);
+  }
+}
