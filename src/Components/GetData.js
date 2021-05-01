@@ -48,7 +48,7 @@ const GetData = (props) => {
         then NoData Component is returned else DisplayData Component is returned */}
 
       {ExtractedData.length === 0 ? (
-        <NoData />
+        <NoData searchItem = {props.searchItem}/>
       ) : (
         <>
         {props.searchItem !== "" ? 
@@ -71,10 +71,6 @@ const GetData = (props) => {
   );
 };
 
-const changes = React.memo( () => {
-    GetData();
-    return GetData
-})
 
 
 export default GetData;

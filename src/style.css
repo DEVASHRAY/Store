@@ -32,18 +32,18 @@ body {
   font-size: 1.6rem;
   padding: 0.5rem 2rem;
   line-height: 2.8rem;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 1px solid #ddd;
   max-width: 99%;
   margin: 1rem;
 }
 
 .search--button {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: #00a5ec81;
   color: white;
   padding: 1rem 2rem;
-  border: 1px solid rgba(0, 0, 0, 0.75);
-  border-radius: 20px;
+  border: 1px solid #00A5EC;
+  border-radius: 5px;
   font-size: 1.4rem;
   cursor: pointer;
   max-width: 95%;
@@ -52,7 +52,7 @@ body {
 }
 
 .search--button:hover {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: #00a5ec;
 }
 
 .search--options {
