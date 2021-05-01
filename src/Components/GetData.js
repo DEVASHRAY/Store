@@ -23,19 +23,33 @@ import DisplayData from "./DisplayData";
 const GetData = (props) => {
   console.log("serach Item", props.searchItem);
   let ExtractedData
-    if(props.searchItem === ""){
-        let filteredItem;
-        ExtractedData = Data.map( (item) => {
-            if (!props.isChecked && item.is_in_stock > 0) {
-                filteredItem = item;
-            }
-            if (props.isChecked && item.is_in_stock >= 0) {
-                filteredItem = item;
-                }
-                return filteredItem
+  let filteredItem;
+
+    if(props.searchItem === "" && !props.isChecked){
+        ExtractedData = Data.map((obj) => {
+            return obj
+        })
+    }
+    else{
+        ExtractedData = Data.filter( (obj) => {
+            return obj.is_in_stock > 0
         })
     }
 
+    // if(props.searchItem === "" && !props.checked){
+    //     ExtractedData = Data.map( (obj) => {
+    //         return obj
+    //     })
+    // }
+    // else if (props.searchItem === "" && props.checked){
+    //     ExtractedData = Data.filter( (obj) => {
+    //         if ( obj.is_in_stock > 0) {
+    //             filteredItem = obj;
+    //             }
+    //             return filteredItem
+    //     })
+    // }
+    
 
 
   if (props.searchItem !== "") {
@@ -44,10 +58,10 @@ const GetData = (props) => {
         // obj.name = obj.name.replace(/ +/g, "");
         
         if (obj.name.toLowerCase().includes(props.searchItem.toLowerCase())) {
-            if (!props.isChecked && obj.is_in_stock > 0) {
+            if (props.isChecked && obj.is_in_stock > 0) {
             filteredItem = obj;
             }
-            else if (props.isChecked && obj.is_in_stock >= 0) {
+            else if (!props.isChecked && obj.is_in_stock >= 0) {
             filteredItem = obj;
             }
         }

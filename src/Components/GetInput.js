@@ -5,7 +5,7 @@ const GetInput = (props) => {
   console.log("RENDER GETINPUT 1");
   const [input, setInput] = useState("");
   const [searchItem, setSreachItem] = useState("");
-  const [isChecked, setIsChecked] = useState(true);
+  const [isChecked, setIsChecked] = useState(false);
 
   const handleChange = (event) => {
     const { value } = event.target;
@@ -40,8 +40,8 @@ const GetInput = (props) => {
             />
             <label>
               {isChecked
-                ? "Hide out-of-stock Items"
-                : "Show out-of-stock Items"}{" "}
+                ? "Show out-of-stock Items"
+                : "Hide out-of-stock Items"}{" "}
             </label>
           </div>
         </form>
