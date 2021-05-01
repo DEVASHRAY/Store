@@ -10,7 +10,6 @@ import NoData from "./NoData";
  */
 
 export const GetData = (props) => {
-    console.log("2-GETDATA");
   let ExtractedData;
 
   // Checking for empty inputbox and checkbox value
