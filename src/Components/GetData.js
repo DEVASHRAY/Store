@@ -25,7 +25,6 @@ import NoData from "./NoData";
 const GetData = (props) => {
   console.log("serach Item", props.searchItem);
   let ExtractedData;
-  let filteredItem;
 
   if (props.searchItem === "" && !props.isChecked) {
     ExtractedData = Data.map((obj) => {
