@@ -69,8 +69,11 @@ const GetData = (props) => {
   console.log("ExtractedData", ExtractedData);
   return (
     <>
-      {ExtractedData == [] ? (
-        <h1>ASDASDSADSA</h1>
+        {/* {props.isChecked ? <h1>asdasd</h1> : <p>asdasdsadsad</p>} */}
+
+
+      {ExtractedData.length === 0? (
+        <NoData/>
       ) : (
         <div className="grid--item">
           {ExtractedData.map((item) => {
