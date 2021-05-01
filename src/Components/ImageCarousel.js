@@ -6,6 +6,8 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
     **/
 
 const ImageCarousel = (props) => {
+
+
   const [currentImg, setCurrentImg] = useState(0);
   const length = props.imgArr.length;
 
@@ -20,7 +22,7 @@ const ImageCarousel = (props) => {
   if (!Array.isArray(props.imgArr || props.imgArr.length <= 0)) {
     return null;
   }
-
+  let k = 100;
   return (
     <>
       {props.imgArr.map((img, index) => {
@@ -36,14 +38,14 @@ const ImageCarousel = (props) => {
                         : "card-image img-out_of_stock"
                     }
                     src={img}
-                    key={props.id}
+                    key={ k - 1}
                     alt="PICS"
                   />
-                  <FaArrowAltCircleLeft
+                  <FaArrowAltCircleLeft key={ k + 1}
                     className="left-arrow"
                     onClick={previousSlide}
                   />
-                  <FaArrowAltCircleRight
+                  <FaArrowAltCircleRight key={ k - 10}
                     className="right-arrow"
                     onClick={nextSlide}
                   />

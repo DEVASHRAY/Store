@@ -61,6 +61,14 @@ body {
   margin: 1rem;
 }
 
+.show-search{
+    display: flex;
+    justify-content: center;
+}
+
+.show-search > p{
+    font-size: 3rem;
+}
 
 .grid--item {
   display: grid;

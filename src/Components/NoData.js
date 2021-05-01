@@ -5,6 +5,7 @@ import NoData1 from "../NoData1.jpeg";
 
 
 const NoData = () => {
+
   return (
     <div className="nodata">
       <img className="nodata-img" src={NoData1} alt ="Pic" />

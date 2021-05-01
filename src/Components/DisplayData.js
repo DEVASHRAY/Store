@@ -6,6 +6,8 @@ import ImageCarousel from "./ImageCarousel";
  */
 
 const DisplayData = (props) => {
+
+
   return (
     <div className="card">
       <ImageCarousel

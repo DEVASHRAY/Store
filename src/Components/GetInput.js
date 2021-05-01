@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GetData from "./GetData";
 
-/** Component To Take input set that value to search for the item and to manage the state of Checkbox 
+/** Component To Take input then set that value to search for the item and to manage the state of Checkbox 
      and then pass the search value and checkbox State to GetData
  **/
 
@@ -9,13 +9,15 @@ import GetData from "./GetData";
 
 
 const GetInput = (props) => {
-  const [input, setInput] = useState("");
+
+
   const [searchItem, setSreachItem] = useState("");
   const [isChecked, setIsChecked] = useState(false);
 
+    let textTyped="";
   const handleChange = (event) => {
     const { value } = event.target;
-    setInput(value);
+        textTyped = value
   };
 
   const handleCheckbox = () => {
@@ -23,7 +25,7 @@ const GetInput = (props) => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    setSreachItem(input);
+    setSreachItem(textTyped);
   };
 
   return (
@@ -33,7 +35,6 @@ const GetInput = (props) => {
           className="search--bar"
           type="text"
           placeholder="Search an item"
-          value={input}
           onChange={handleChange}
         />
         <button className="search--button">Search</button>

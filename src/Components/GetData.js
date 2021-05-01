@@ -10,6 +10,7 @@ import NoData from "./NoData";
  */
 
 const GetData = (props) => {
+
   let ExtractedData;
 
   // Checking for empty inputbox and checkbox value
@@ -50,6 +51,10 @@ const GetData = (props) => {
         <NoData />
       ) : (
         <>
+        {props.searchItem !== "" ? 
+            <div className = "show-search">
+                <p>Showing search results</p> 
+            </div> : null}
           <div className="grid--item">
             {ExtractedData.map((item, index) => {
               return <DisplayData data={item} key={item.id} id={index} />;
@@ -65,5 +70,11 @@ const GetData = (props) => {
     </>
   );
 };
+
+const changes = React.memo( () => {
+    GetData();
+    return GetData
+})
+
 
 export default GetData;
