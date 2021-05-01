@@ -18,6 +18,8 @@ body {
 }
 
 .main--page {
+    max-width: 90%;
+    margin: 1rem auto;
 }
 
 .header {
