@@ -26,7 +26,7 @@ const GetData = (props) => {
     let filteredItem;
     // obj.name = obj.name.replace(/ +/g, "");
     if (props.searchItem !== "") {
-      if (obj.name.toLowerCase().includes(props.searchItem)) {
+      if (obj.name.toLowerCase().includes(props.searchItem.toLowerCase())) {
         if (!props.isChecked && obj.is_in_stock > 0) {
           filteredItem = obj;
         }
