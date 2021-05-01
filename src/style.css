@@ -39,7 +39,7 @@ body {
 }
 
 .search--button {
-  background-color: #00a5ec81;
+  background-color: #00a5ec;
   color: white;
   padding: 1rem 2rem;
   border: 1px solid #00A5EC;
@@ -52,7 +52,7 @@ body {
 }
 
 .search--button:hover {
-  background-color: #00a5ec;
+  background-color: #00a5ec91;
 }
 
 .search--options {
