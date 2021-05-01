@@ -39,9 +39,7 @@ const GetInput = (props) => {
               onChange={handleCheckbox}
             />
             <label>
-              {isChecked
-                ? "Show out-of-stock Items"
-                : "Hide out-of-stock Items"}
+            Hide out-of-stock Items
             </label>
           </div>
         </form>
