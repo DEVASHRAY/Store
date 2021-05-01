@@ -49,7 +49,6 @@ const GetData = (props) => {
     //             return filteredItem
     //     })
     // }
-    
 
 
   if (props.searchItem !== "") {

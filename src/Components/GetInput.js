@@ -41,7 +41,7 @@ const GetInput = (props) => {
             <label>
               {isChecked
                 ? "Show out-of-stock Items"
-                : "Hide out-of-stock Items"}{" "}
+                : "Hide out-of-stock Items"}
             </label>
           </div>
         </form>
