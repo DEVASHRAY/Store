@@ -17,6 +17,12 @@ body {
   color: #333;
 }
 
+.main--page{
+    max-width : 85%;
+    margin : 1rem auto
+}
+
+
 .header {
   display: grid;
   grid-template-columns: auto;
