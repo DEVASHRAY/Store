@@ -11,7 +11,7 @@ const NoData = () => {
     return (
     <div className = "nodata">
         <img className = "nodata-img"src = {NoData1}/>
-         <BackBtn/>
+       
     </div>
     )
 }

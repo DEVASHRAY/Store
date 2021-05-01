@@ -4,24 +4,6 @@ import BackBtn from "./BackBtn";
 import DisplayData from "./DisplayData";
 import NoData from "./NoData";
 
-// const GetData = () => {
-// const  [searchItem , setSreachItem] = useState("")
-
-// const handleSubmit = (event , input) => {
-//     event.preventDefault();
-//     setSreachItem(input)
-// }
-
-// console.log(searchItem);
-//     return(
-//         <>
-//         <GetInput handleSubmit={handleSubmit} />
-//         </>
-//     )
-// }
-
-// export default GetData
-
 const GetData = (props) => {
   console.log("serach Item", props.searchItem);
   let ExtractedData;
@@ -35,20 +17,6 @@ const GetData = (props) => {
       return obj.is_in_stock > 0;
     });
   }
-
-  // if(props.searchItem === "" && !props.checked){
-  //     ExtractedData = Data.map( (obj) => {
-  //         return obj
-  //     })
-  // }
-  // else if (props.searchItem === "" && props.checked){
-  //     ExtractedData = Data.filter( (obj) => {
-  //         if ( obj.is_in_stock > 0) {
-  //             filteredItem = obj;
-  //             }
-  //             return filteredItem
-  //     })
-  // }
 
   if (props.searchItem !== "") {
     ExtractedData = Data.filter((obj) => {
@@ -69,18 +37,18 @@ const GetData = (props) => {
   console.log("ExtractedData", ExtractedData);
   return (
     <>
-      {ExtractedData.length === 0? (
-        <NoData/>
+      {ExtractedData.length === 0 ? (
+        <NoData />
       ) : (
-          <>
-        <div className="grid--item">
-          {ExtractedData.map((item) => {
-            return <DisplayData data={item} key={item.id} />;
-          })}
-        </div>
-        <BackBtn/>
+        <>
+          <div className="grid--item">
+            {ExtractedData.map((item, index) => {
+              return <DisplayData data={item} key={item.id} id={index} />;
+            })}
+          </div>
         </>
       )}
+      {props.searchItem != "" ? <BackBtn/> : null}
     </>
   );
 };
