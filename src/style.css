@@ -146,6 +146,7 @@ body {
   cursor: pointer;
   transition: 0.2s;
   background-color: #ffffff;
+  max-width: 350px;
 }
 .card:hover {
   transform: translateY(-0.5%);
