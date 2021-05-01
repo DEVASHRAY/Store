@@ -53,7 +53,7 @@ const GetData = (props) => {
         <>
         {props.searchItem !== "" ? 
             <div className = "show-search">
-                <p>Showing search results</p> 
+                <p>Showing search results for {`"${props.searchItem}"`}</p> 
             </div> : null}
           <div className="grid--item">
             {ExtractedData.map((item, index) => {
