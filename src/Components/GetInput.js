@@ -34,7 +34,7 @@ const GetInput = (props) => {
         <input
           className="search--bar"
           type="text"
-          placeholder="Search an item"
+          placeholder="Search a product or any keyword"
           onChange={handleChange}
         />
         <button className="search--button">Search</button>
