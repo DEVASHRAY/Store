@@ -158,6 +158,9 @@ body {
   margin-right: 1.5rem;
   padding-bottom: 1.3rem;
 }
+label{
+    font-size: 1.5rem;
+}
 
 .img-out_of_stock:hover {
   box-shadow: 0 2rem 8rem rgba(233, 11, 11, 0.897);
@@ -176,6 +179,14 @@ body {
 
 .card-content > * {
   text-align: center;
+}
+
+.item-price{
+    font-size: 1.5rem;
+}
+
+small{
+    font-size: 1.4rem;
 }
 
 .nodata {
