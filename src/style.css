@@ -214,8 +214,9 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(30rem, 0.5fr));
   }
   .nodata-img {
-      height: 15vw;
-      width: 15vw;
+      height: 25vw;
+      width: 25vw;
+     
   }
 }
 /* 
