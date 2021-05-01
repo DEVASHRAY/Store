@@ -211,6 +211,10 @@ body {
     grid-gap: 6rem;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 0.5fr));
   }
+  .nodata-img {
+      height: 500px;
+      width: 500px;
+  }
 }
 /* 
 @media only screen (min-width:430px) and (max-width:785px) {
