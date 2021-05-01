@@ -5,10 +5,11 @@ const DisplayData = (props) => {
   // console.log("props of Display" , props.data.name);
   return (
     <div className="card">
-      <ImageCarousel imgArr={props.data.images} />
+      <ImageCarousel imgArr={props.data.images} stock={props.data.is_in_stock }/>
       <div className="card-content">
         <h3 className="item-name">{props.data.name}</h3>
-        <p className="item-price">{props.data.price}</p>
+        <p className="item-price"> ₹ {props.data.price}</p>
+        <small className = {props.data.is_in_stock > 0 ? "available" : "out_of_stock"}>{props.data.is_in_stock > 0 ? "Available" : "Out Of Stock"}</small>
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ const ImageCarousel = (props) => {
             {index === currentImg && (
              <div className = "cardd">
                     <section className = "slider">
-                <img className="card-image" src={img} key={index} alt={Image} />
+                <img className={props.stock > 0 ? "img-available card-image" : "card-image img-out_of_stock"} src={img} key={index} alt={Image} />
                 <FaArrowAltCircleLeft
                   className="left-arrow"
                   onClick={previousSlide}
