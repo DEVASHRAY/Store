@@ -1,5 +1,6 @@
 import React from "react";
 import Data from "../Data";
+import BackBtn from "./BackBtn";
 import DisplayData from "./DisplayData";
 import NoData from "./NoData";
 
@@ -69,17 +70,17 @@ const GetData = (props) => {
   console.log("ExtractedData", ExtractedData);
   return (
     <>
-        {/* {props.isChecked ? <h1>asdasd</h1> : <p>asdasdsadsad</p>} */}
-
-
       {ExtractedData.length === 0? (
         <NoData/>
       ) : (
+          <>
         <div className="grid--item">
           {ExtractedData.map((item) => {
             return <DisplayData data={item} key={item.id} />;
           })}
         </div>
+        <BackBtn/>
+        </>
       )}
     </>
   );

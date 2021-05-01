@@ -143,7 +143,7 @@ body {
 .card {
   border-radius: 0.4rem;
   overflow: hidden;
-  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1); */
   cursor: pointer;
   transition: 0.2s;
   background-color: #ffffff;
@@ -151,8 +151,8 @@ body {
   
 }
 .card:hover {
-  transform: translateY(-0.5%);
-  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+  /* transform: translateY(-0.5%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5); */
 }
 /** CARD CONTENT **/
 

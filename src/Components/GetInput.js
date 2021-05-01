@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import GetData from "./GetData";
+import NoData from "./NoData";
 
 const GetInput = (props) => {
   console.log("RENDER GETINPUT 1");
@@ -23,7 +24,7 @@ const GetInput = (props) => {
   return (
     <>
       
-        <form className="header" onSubmit={handleSubmit}>
+        <form className="header" onSubmit={(event) => handleSubmit(event)}>
           <input
             className="search--bar"
             type="text"
@@ -43,7 +44,7 @@ const GetInput = (props) => {
             </label>
           </div>
         </form>
-   
+        {/* {handleSubmit() ? <NoData/> : null} */}
         <GetData searchItem={searchItem} isChecked={isChecked} />
     
     </>
