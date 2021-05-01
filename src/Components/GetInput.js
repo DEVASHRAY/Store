@@ -5,19 +5,16 @@ import GetData from "./GetData";
      and then pass the search value and checkbox State to GetData
  **/
 
-
-
-
 const GetInput = (props) => {
 
-
+const[input , setInput] = useState("")
   const [searchItem, setSreachItem] = useState("");
   const [isChecked, setIsChecked] = useState(false);
 
-    let textTyped="";
+    
   const handleChange = (event) => {
     const { value } = event.target;
-        textTyped = value
+        setInput(value)
   };
 
   const handleCheckbox = () => {
@@ -25,7 +22,7 @@ const GetInput = (props) => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    setSreachItem(textTyped);
+    setSreachItem(input);
   };
 
   return (
@@ -34,6 +31,7 @@ const GetInput = (props) => {
         <input
           className="search--bar"
           type="text"
+          value={input}
           placeholder="Search a product or any keyword"
           onChange={handleChange}
         />
