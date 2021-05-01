@@ -22,22 +22,39 @@ import DisplayData from "./DisplayData";
 
 const GetData = (props) => {
   console.log("serach Item", props.searchItem);
-  let ExtractedData = Data.filter((obj) => {
-    let filteredItem;
-    // obj.name = obj.name.replace(/ +/g, "");
-    if (props.searchItem !== "") {
-      if (obj.name.toLowerCase().includes(props.searchItem.toLowerCase())) {
-        if (!props.isChecked && obj.is_in_stock > 0) {
-          filteredItem = obj;
-        }
-        if (props.isChecked && obj.is_in_stock >= 0) {
-          filteredItem = obj;
-        }
-      }
+  let ExtractedData
+    if(props.searchItem === ""){
+        let filteredItem;
+        ExtractedData = Data.map( (item) => {
+            if (!props.isChecked && item.is_in_stock > 0) {
+                filteredItem = item;
+            }
+            if (props.isChecked && item.is_in_stock >= 0) {
+                filteredItem = item;
+                }
+                return filteredItem
+        })
     }
-    return filteredItem;
-  });
- 
+
+
+
+  if (props.searchItem !== "") {
+    ExtractedData = Data.filter((obj) => {
+        let filteredItem;
+        // obj.name = obj.name.replace(/ +/g, "");
+        
+        if (obj.name.toLowerCase().includes(props.searchItem.toLowerCase())) {
+            if (!props.isChecked && obj.is_in_stock > 0) {
+            filteredItem = obj;
+            }
+            if (props.isChecked && obj.is_in_stock >= 0) {
+            filteredItem = obj;
+            }
+        }
+        
+        return filteredItem;
+    });
+}
   return (
     <div className="grid--item">
       {ExtractedData.map((item, index) => {
