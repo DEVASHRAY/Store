@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import GetData from "./GetData";
+import {MemoizedData} from "./GetData";
 
 /** Component To Take input then set that value to search for the item and to manage the state of Checkbox 
      and then pass the search value and checkbox State to GetData
@@ -45,7 +45,7 @@ const[input , setInput] = useState("")
           <label>Hide out-of-stock Items</label>
         </div>
       </form>
-      <GetData searchItem={searchItem} isChecked={isChecked} />
+      <MemoizedData searchItem={searchItem} isChecked={isChecked} />
     </>
   );
 };

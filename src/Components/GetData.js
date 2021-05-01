@@ -9,8 +9,8 @@ import NoData from "./NoData";
     Component for Display.
  */
 
-const GetData = (props) => {
-
+export const GetData = (props) => {
+    console.log("2-GETDATA");
   let ExtractedData;
 
   // Checking for empty inputbox and checkbox value
@@ -73,4 +73,4 @@ const GetData = (props) => {
 
 
 
-export default GetData;
+export const MemoizedData = React.memo(GetData)
