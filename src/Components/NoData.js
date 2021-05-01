@@ -1,5 +1,5 @@
 import React from "react"
-import GetInput from "./GetInput";
+import NoData1 from "../NoData1.jpeg"
 
 const NoData = () => {
     console.log("NODATA");
@@ -8,10 +8,10 @@ const NoData = () => {
 
 
     return (
-    <>
-        <h3>No Items Found</h3>
-        <button><a href = "./GetData.js">Go Back</a></button>
-    </>
+    <div className = "nodata">
+        <img className = "nodata-img"src = {NoData1}/>
+         <button className="nodata-btn"><a href = "./GetData.js">Go Back</a></button>
+    </div>
     )
 }
 

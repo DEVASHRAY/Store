@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
-
 html {
   font-size: 10px;
 }
@@ -15,13 +14,11 @@ body {
   margin: 0;
   background-color: #f8f8f8;
   color: #333;
+  background-color: #eee;
 }
 
-.main--page{
-    max-width : 85%;
-    margin : 1rem auto
+.main--page {
 }
-
 
 .header {
   display: grid;
@@ -35,7 +32,7 @@ body {
   line-height: 2.8rem;
   border-radius: 20px;
   border: 1px solid #ddd;
-
+  max-width: 95%;
   margin: 1rem;
 }
 
@@ -47,6 +44,7 @@ body {
   border-radius: 20px;
   font-size: 1.4rem;
   cursor: pointer;
+  max-width: 95%;
   transition: background-color 250ms;
   margin: 1rem;
 }
@@ -63,14 +61,11 @@ body {
 /** Styling of Display Cards **/
 
 .grid--item {
-    display: grid;
-    grid-gap: 6rem;
-    grid-template-columns: 1fr;
-    margin: 2rem 4rem;
-   
-  }
-
- 
+  display: grid;
+  grid-gap: 6rem;
+  grid-template-columns: auto;
+  margin: 2rem 4rem;
+}
 
 /** IMAGE CAROUSEL **/
 
@@ -80,16 +75,14 @@ body {
   display: flex;
   justify-content: center;
   width: 256px;
-  height: 400px;
 }
 
-.card-image{
-  
+.card-image {
   height: 400px;
   margin: 3rem 1rem;
   border-radius: 5%;
   padding: 0.2rem 2rem;
-
+  width: auto;
 }
 
 /* .card-image:hover{
@@ -101,26 +94,25 @@ body {
   transform: translateX(-0.5%);
 } */
 
-.img-available:hover{
-    box-shadow: 0 2rem 8rem rgba(11, 233, 29, 0.897);
+.img-available:hover {
+  box-shadow: 0 2rem 8rem rgba(11, 233, 29, 0.897);
   cursor: pointer;
   transition: 0.2s;
   transform: translateY(-0.5%);
   transform: translateX(-0.5%);
 }
 
-.img-out_of_stock:hover{
-    box-shadow: 0 2rem 8rem rgba(233, 11, 11, 0.897);
+.img-out_of_stock:hover {
+  box-shadow: 0 2rem 8rem rgba(233, 11, 11, 0.897);
   cursor: pointer;
   transition: 0.2s;
   transform: translateY(-0.5%);
   transform: translateX(-0.5%);
 }
-
 
 .right-arrow {
   position: absolute;
-   top: 50%; 
+  top: 50%;
   right: 12px;
   font-size: 1rem;
   color: #000;
@@ -132,63 +124,78 @@ body {
   position: absolute;
   top: 50%;
   left: 12px;
-    font-size: 1rem;
+  font-size: 1rem;
   color: #000;
   z-index: 10;
   cursor: pointer;
   user-select: none;
 }
 
-.cardd{
-    display: flex;
-    justify-content: center;
+.cardd {
+  display: flex;
+  justify-content: center;
 }
 
-.card{
-    
+.card {
   border-radius: 0.4rem;
   overflow: hidden;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: 0.2s;
   background-color: #ffffff;
-
 }
-.card:hover{
-    transform: translateY(-0.5%);
+.card:hover {
+  transform: translateY(-0.5%);
   box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
 }
 /** CARD CONTENT **/
 
-.card-content{
-    font-size: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   margin-top: 3rem;
+.card-content {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.card-content > *{
-    text-align: center;
+.card-content > * {
+  text-align: center;
 }
 
-.item-name{
-    margin-top: 4rem;
-    margin-bottom: 1rem;
+.item-name {
+    
 }
 
-.available{
-    color: rgb(94, 255, 0);
-    margin-left: auto;
-    margin-right: 1.5rem;
-    padding-bottom: 1.3rem;
+.available {
+  color: rgb(94, 255, 0);
+  margin-left: auto;
+  margin-right: 1.5rem;
+  padding-bottom: 1.3rem;
 }
 
-.out_of_stock{
-    color: red;
-    margin-left: auto;
-    margin-right: 1.5rem;
-    padding-bottom: 1.3rem;
+.out_of_stock {
+  color: red;
+  margin-left: auto;
+  margin-right: 1.5rem;
+  padding-bottom: 1.3rem;
+}
+
+.nodata {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nodata-img {
+  margin: 1rem 2rem;
+  width: 90%;
+  padding-bottom: 1rem;
+}
+
+.nodata-btn > a {
+  text-decoration: none;
+  padding: 0.6rem;
+  font-size: 1.2rem;
 }
 
 @media only screen and (min-width: 786px) {
@@ -200,11 +207,23 @@ body {
 
   .grid--item {
     display: grid;
-   
+
     grid-gap: 6rem;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 0.5fr));
-    
-   
   }
-
 }
+/* 
+@media only screen (min-width:430px) and (max-width:785px) {
+  body{
+    background-color: red;
+  }  
+} */
+@media all and (max-width: 785px) and (min-width: 673px){
+   
+        .grid--item {
+            display: grid;
+        
+            grid-gap: 2rem;
+            grid-template-columns: repeat(2 , 0.8fr);
+          }
+        }
