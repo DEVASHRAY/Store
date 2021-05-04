@@ -1,5 +1,5 @@
 import React from "react";
-import NoData1 from "../NoData1.jpeg";
+import NoData1 from "../NoData1.png";
 
 /** Component returns the img when the serach item is not found in data */
 

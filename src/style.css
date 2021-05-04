@@ -15,7 +15,7 @@ body {
   margin: 0;
   background-color: #f8f8f8;
   color: #333;
-  background-color: #eee;
+  background-color: #ffffff;
 }
 
 .main--page {
@@ -121,7 +121,7 @@ body {
 
 .card:hover {
   transform: translateY(-0.5%);
-  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+  box-shadow: 1rem 1rem 1rem 1rem rgb(0 ,0 ,0 , 7%);
 }
 
 .cardd {
